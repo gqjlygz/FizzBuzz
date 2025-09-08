@@ -1,20 +1,16 @@
 package lab1;
 
 public class Multiples {
+
     public static void main(String[] args) {
-        extracted();
+        System.out.println("There are " + multiples(1000, 3, 5) + " multiples of 3 or 5 below 1000.");
     }
 
-    private static void extracted() {
-        int count = multiples();
-        System.out.println("There are " + count + " multiples of 3 and 5.");
-    }
-
-    private static int multiples() {
+    static int multiples(int n, int a, int b) {
         int count = 0;
 
-        for(int i = 1; i < 1000; i++) {
-            if(i % 3 == 0 || i % 5 == 0){
+        for (int i = 1; i < n; i++) {
+            if (i % a == 0 || i % b == 0) {
                 count++;
             }
         }
